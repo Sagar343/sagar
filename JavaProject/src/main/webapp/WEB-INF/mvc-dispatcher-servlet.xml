@@ -77,8 +77,8 @@
 	</bean>
 	<bean class="org.springframework.mail.javamail.JavaMailSenderImpl" 
 		id="mailSender"> <property value="smtp.gmail.com" name="host" /> <property 
-		value="8888" name="port" /> <property value="sagarproweb@gmail.com" name="username" 
-		/> <property value="sagar12@" name="password" /> <property name="javaMailProperties"> 
+		value="8888" name="port" /> <property value="your UserName" name="username" 
+		/> <property value="yourpass" name="password" /> <property name="javaMailProperties"> 
 		<props> <prop key="mail.transport.protocol">smtp</prop> <prop key="mail.smtp.auth">true</prop> 
 		<prop key="mail.smtp.starttls.enable">true</prop> <prop key="mail.smtp.socketFactory.port">465</prop> 
 		<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop> 
