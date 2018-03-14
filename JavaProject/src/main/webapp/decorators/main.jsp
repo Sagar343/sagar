@@ -114,8 +114,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="app-media.html">
-                    <span>Media</span>
+                  <a href="load_master1.html">
+                    <span>Master Page</span>
                   </a>
                 </li>
                 <li>

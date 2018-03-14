@@ -9,6 +9,7 @@
 		<div class="main-content">
           <div class="content-view">
             <div class="card">
+            
               <div class="card-header no-bg b-a-0">
                 Datatables
               </div>
