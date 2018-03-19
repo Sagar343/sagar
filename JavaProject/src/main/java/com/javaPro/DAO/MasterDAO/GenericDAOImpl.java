@@ -38,7 +38,7 @@ public abstract class GenericDAOImpl<T> extends HibernateDaoSupport
 	public List<T> findAll() throws Exception {
 		// TODO Auto-generated method stub
 		Session session=getHibernateTemplate().getSessionFactory().openSession();
-		List<T> list=session.createQuery("from" +entityClass.getName()).list();
+		List<T> list=session.createQuery("from " +entityClass.getName()).list();
 		session.close();
 		return list;
 	}

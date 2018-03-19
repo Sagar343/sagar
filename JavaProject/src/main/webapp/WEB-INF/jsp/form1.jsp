@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,38 +39,34 @@
                 <table class="table table-bordered datatable">
                   <thead>
                     <tr>
-                    <th>
-                        Sl No
+                    
+                      <th>
+                        Centre Code
                       </th>
                       <th>
-                        Name
+                        Centre Name
                       </th>
-                      <th>
-                        E-Mail ID
-                      </th>
-                      <th>
-                        Employee ID
-                      </th>
-                      <th>
-                        Position
-                      </th>
-                      <th>
-                        Start Date
-                      </th>
+                     
                     </tr>
                   </thead>
                   
                   <tbody>
+                  <c:forEach items="${data}" var="vml">
                   <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                   <td><c:out value="${vml.centre_code}"></c:out></td>
+                  <td><c:out value="${vml.centre_name}"></c:out></td>
                   </tr>
+                  </c:forEach>
                   
+                 <%--  <c:forEach items="${data}" var="vml" varStatus="loop">
+                  <tr>
+                  <td><c:out value="${vml.centre_code}"></c:out></td>
+                  <td><c:out value="${vml.centre_name}"></c:out></td>
+                  
+                  </tr>
+                  </c:forEach> --%>
                   </tbody>
+                  
                 </table>
               </div>
             </div>

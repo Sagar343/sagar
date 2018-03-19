@@ -1,5 +1,9 @@
 package com.javaPro.Controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.*;
 import org.springframework.ui.ModelMap;
@@ -18,11 +22,24 @@ public class MasterController {
 	
 	
 	@RequestMapping(value="load_master1",method=RequestMethod.GET)
-	public String loading(ModelMap modelMap){
+	public ModelAndView loading(ModelMap modelMap){
 		
+		Map<String, Object> hsh=new HashMap<String,Object>();
+		try {
+			List<CentreDTO> lst=master_Service.findAll();
+			hsh.put("data",lst);
+			System.out.println("------------"+lst);
+			for (CentreDTO centreDTO : lst) {
+				centreDTO.getCentre_code();
+				centreDTO.getCentre_name();
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		
-		return "form1";
+		return new ModelAndView("form1",hsh);
 	}
 
 	
