@@ -37,7 +37,7 @@
              
               <div class="card-block">
                 <table class="table table-bordered datatable">
-                  <thead>
+                  <thead class="thead-inverse">
                     <tr>
                     
                       <th>
@@ -58,13 +58,7 @@
                   </tr>
                   </c:forEach>
                   
-                 <%--  <c:forEach items="${data}" var="vml" varStatus="loop">
-                  <tr>
-                  <td><c:out value="${vml.centre_code}"></c:out></td>
-                  <td><c:out value="${vml.centre_name}"></c:out></td>
-                  
-                  </tr>
-                  </c:forEach> --%>
+                 
                   </tbody>
                   
                 </table>
