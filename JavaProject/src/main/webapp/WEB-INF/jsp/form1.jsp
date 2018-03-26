@@ -19,14 +19,36 @@
                     <div class="form-group row">
                       <label for="example-number-input" class="col-xs-2 col-form-label">Centre Code</label>
                       <div class="col-xs-4">
-                        <input class="form-control" type="number" name="centre_code" value="" id="example-number-input">
+                        <input class="form-control" type="number" name="centre.centre_code"  id="example-number-input">
                       </div>
                     </div>
                       <div class="form-group row">
                       <label for="example-text-input" class="col-xs-2 col-form-label">Centre Name</label>
-                      <div class="col-xs-4">
-                        <input class="form-control" type="text" name="centre_name" value="" id="example-text-input">
+                     <div class="col-xs-4">
+                        <input class="form-control" type="text" name="centre.centre_name" value="" id="example-text-input">
                       </div>
+                    </div>
+                    
+                    <label for="example-text-input" class="col-xs-2 col-form-label">Select Role</label>
+                     <div class="col-sm-10">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="roleName" id="gridRadios1" value="Administrator" checked/>
+                              Administrator
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="roleName" id="gridRadios2" value="Financial"/>
+                              Financial
+                            </label>
+                          </div>
+                          <div class="radio disabled">
+                            <label>
+                              <input type="radio" name="roleName" id="gridRadios3" value="Maintanance" />
+                             Maintanance
+                            </label>
+                          </div>
                     </div>
                       
                       <button type="submit" class="btn btn-primary">

@@ -1,7 +1,7 @@
 package com.javaPro.DAO.MasterDAO;
 
-import com.javaPro.DTO.MasterPage.CentreDTO;
+import com.javaPro.DTO.MasterPage.RoleDTO;
 
-public interface MasterDAO extends GenericDAO<CentreDTO>{
+public interface MasterDAO extends GenericDAO<RoleDTO>{
 
 }

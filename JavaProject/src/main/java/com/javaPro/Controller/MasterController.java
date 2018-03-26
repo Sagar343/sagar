@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.javaPro.DTO.MasterPage.CentreDTO;
+import com.javaPro.DTO.MasterPage.RoleDTO;
 import com.javaPro.Service.MasterService.MasterService;
 
 @Controller
@@ -26,13 +27,12 @@ public class MasterController {
 		
 		Map<String, Object> hsh=new HashMap<String,Object>();
 		try {
-			List<CentreDTO> lst=master_Service.findAll();
-			hsh.put("data",lst);
-			System.out.println("------------"+lst);
-			for (CentreDTO centreDTO : lst) {
+			//List<CentreDTO> lst=master_Service.findAll();
+			//hsh.put("data",lst);
+			/*for (CentreDTO centreDTO : lst) {
 				centreDTO.getCentre_code();
 				centreDTO.getCentre_name();
-			}
+			}*/
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -44,9 +44,10 @@ public class MasterController {
 
 	
 	@RequestMapping(value="saveCentre",method=RequestMethod.POST)
-	public ModelAndView saving(@ModelAttribute CentreDTO dto){
+	public ModelAndView saving(@ModelAttribute RoleDTO dto){
 		
 		try {
+			System.out.println(dto.getCentre());
 			master_Service.saveOrUpdate(dto);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

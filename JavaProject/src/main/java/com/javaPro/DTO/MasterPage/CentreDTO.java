@@ -1,10 +1,7 @@
 package com.javaPro.DTO.MasterPage;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,7 +21,9 @@ public class CentreDTO {
 	
 	@Column(name="centre_name")
 	private String centre_name;
-
+	
+	
+	
 	public int getSino() {
 		return sino;
 	}
@@ -48,6 +47,7 @@ public class CentreDTO {
 	public void setCentre_name(String centre_name) {
 		this.centre_name = centre_name;
 	}
+
 	
 	
 }
